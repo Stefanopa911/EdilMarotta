@@ -3,207 +3,155 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<meta name="theme-color" content="#0B0B0E" />
-<title>EdilMarotta — Impresa Edile</title>
-<meta name="description" content="EdilMarotta. Impresa edile dal 1998. Costruzioni, ristrutturazioni e opere strutturali in Italia." />
+<meta name="theme-color" content="#0A0A0A" />
+<title>EdilMarotta — Costruiamo edifici che durano</title>
+<meta name="description" content="EdilMarotta. Impresa edile italiana dal 1998." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --purple:#8169B5;
   --purple-light:#B8A4D4;
-  --purple-soft:#9B85C7;
+  --purple-soft:#E8E0F2;
   --purple-dark:#5D4A8A;
-  --purple-glow:rgba(129,105,181,.18);
-  --ink:#0A0A0E;
-  --ink-2:#101015;
-  --ink-3:#16161D;
-  --ink-4:#1E1E27;
-  --paper:#F2F1ED;
-  --paper-dim:#D8D7D1;
-  --muted:#8B8B95;
-  --muted-2:#5E5E68;
-  --muted-3:#3A3A42;
-  --line:rgba(255,255,255,.07);
-  --line-2:rgba(255,255,255,.13);
-  --line-strong:rgba(255,255,255,.22);
+  --ink:#0A0A0A;
+  --ink-2:#111114;
+  --ink-3:#16161B;
+  --paper:#F2EFE8;
+  --muted:#84847C;
+  --muted-2:#5C5C56;
+  --line:rgba(242,239,232,.08);
+  --line-2:rgba(242,239,232,.14);
   --easing:cubic-bezier(.22,.61,.36,1);
   --easing-out:cubic-bezier(.16,1,.3,1);
-  --easing-soft:cubic-bezier(.34,.07,.32,1.01);
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{
-  font-family:'Inter',system-ui,sans-serif;
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
   background:var(--ink);
   color:var(--paper);
-  font-size:16px;
-  line-height:1.5;
-  font-weight:400;
+  font-size:16px;line-height:1.5;font-weight:400;
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
   overflow-x:hidden;
+  font-feature-settings:"ss01","cv11";
 }
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;border:none;background:none;color:inherit;cursor:pointer}
-img{max-width:100%;display:block}
+img,svg{max-width:100%;display:block}
 ::selection{background:var(--purple);color:var(--paper)}
-
-/* Grain */
-.grain{
-  position:fixed;inset:0;pointer-events:none;z-index:9000;
-  opacity:.04;mix-blend-mode:overlay;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-}
-
-/* Subtle vignette */
-.vignette{
-  position:fixed;inset:0;pointer-events:none;z-index:8999;
-  background:radial-gradient(ellipse at center,transparent 50%,rgba(0,0,0,.35) 100%);
-}
 
 /* ============= NAV ============= */
 header.nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
-  background:rgba(10,10,14,0);
+  background:rgba(10,10,10,0);
   backdrop-filter:blur(0);
   -webkit-backdrop-filter:blur(0);
   border-bottom:1px solid transparent;
-  transition:background .4s, border-color .4s, backdrop-filter .4s;
+  transition:background .35s, border-color .35s, backdrop-filter .35s;
 }
 header.nav.scrolled{
-  background:rgba(10,10,14,.78);
-  backdrop-filter:blur(18px) saturate(180%);
-  -webkit-backdrop-filter:blur(18px) saturate(180%);
+  background:rgba(10,10,10,.82);
+  backdrop-filter:blur(20px) saturate(160%);
+  -webkit-backdrop-filter:blur(20px) saturate(160%);
   border-bottom-color:var(--line);
 }
 .nav-inner{
-  max-width:1340px;margin:0 auto;
-  padding:18px 40px;
+  max-width:1480px;margin:0 auto;
+  padding:18px 32px;
   display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:32px;
 }
-.brand{display:flex;align-items:center;gap:12px}
-.brand-mark{width:32px;height:32px;flex-shrink:0}
-.brand-name{font-family:'Inter';font-weight:600;font-size:15px;letter-spacing:-.005em;line-height:1.1}
-.brand-name .e{color:var(--purple)}
-.brand-tag{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:3px}
-.nav-links{display:flex;gap:30px;align-items:center;justify-self:center}
-.nav-links a{font-size:13.5px;color:var(--paper);font-weight:500;position:relative;padding:6px 0}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-mark{width:30px;height:30px;flex-shrink:0}
+.brand-text{font-family:'Inter';font-weight:700;font-size:17px;letter-spacing:-.02em}
+.brand-text .e{color:var(--purple)}
+
+.nav-links{display:flex;gap:36px;align-items:center;justify-self:center}
+.nav-links a{font-size:14px;color:var(--paper);font-weight:500;letter-spacing:-.005em;position:relative;padding:8px 0}
 .nav-links a::after{
-  content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--purple);
-  transition:width .4s var(--easing-out);
+  content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--paper);
+  transition:width .35s var(--easing-out);
 }
 .nav-links a:hover::after{width:100%}
-.nav-status{
-  display:flex;align-items:center;gap:8px;
-  font-size:11px;color:var(--muted);letter-spacing:.06em;
-  padding:8px 14px;border:1px solid var(--line);border-radius:100px;
-}
-.nav-status .dot{width:6px;height:6px;background:#5DD39E;border-radius:50%;box-shadow:0 0 0 0 #5DD39E;animation:pulseDot 2s infinite}
-@keyframes pulseDot{0%,100%{box-shadow:0 0 0 0 rgba(93,211,158,.5)}50%{box-shadow:0 0 0 6px rgba(93,211,158,0)}}
+
 .nav-cta{
-  padding:11px 20px;background:var(--paper);color:var(--ink);
-  border-radius:100px;font-size:13px;font-weight:500;letter-spacing:.005em;
+  padding:11px 22px;background:var(--paper);color:var(--ink);
+  border-radius:100px;font-size:13px;font-weight:600;
   transition:transform .25s var(--easing-out), background .25s, color .25s;
 }
 .nav-cta:hover{background:var(--purple);color:var(--paper);transform:translateY(-1px)}
 
 .nav-burger{
-  display:none;width:40px;height:40px;
+  display:none;width:42px;height:42px;
   flex-direction:column;justify-content:center;align-items:center;gap:5px;
-  border:1px solid var(--line);border-radius:50%;
+  border:1px solid var(--line-2);border-radius:50%;
 }
-.nav-burger span{display:block;width:14px;height:1px;background:var(--paper);transition:transform .35s var(--easing-out), opacity .25s}
+.nav-burger span{display:block;width:14px;height:1.5px;background:var(--paper);transition:transform .35s var(--easing-out)}
 .nav-burger.open span:nth-child(1){transform:translateY(3px) rotate(45deg)}
 .nav-burger.open span:nth-child(2){transform:translateY(-3px) rotate(-45deg)}
 
-/* Mobile drawer */
+/* Drawer */
 .drawer{
   position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);z-index:99;
   background:var(--ink-2);
   transform:translateX(100%);transition:transform .55s var(--easing-out);
-  display:flex;flex-direction:column;padding:100px 32px 40px;
+  display:flex;flex-direction:column;padding:96px 28px 36px;
   border-left:1px solid var(--line);
 }
 .drawer.open{transform:translateX(0)}
-.drawer a{
-  font-family:'Fraunces',serif;font-weight:300;
-  font-size:34px;letter-spacing:-.02em;color:var(--paper);
+.drawer a.dlnk{
+  font-family:'Inter',sans-serif;font-weight:700;
+  font-size:36px;letter-spacing:-.03em;color:var(--paper);
   padding:14px 0;border-bottom:1px solid var(--line);
-  display:flex;justify-content:space-between;align-items:center;
+  display:flex;justify-content:space-between;align-items:baseline;
+  transition:color .3s, padding-left .35s var(--easing-out);
 }
-.drawer a span:last-child{font-family:'Inter';font-size:11px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
-.drawer .drawer-foot{margin-top:auto;font-size:13px;color:var(--muted);line-height:1.6}
-.drawer .drawer-foot a{font-size:14px;border:none;padding:6px 0;display:inline-block;color:var(--paper);font-family:'Inter';font-weight:500}
-.drawer .drawer-foot a:hover{color:var(--purple-light)}
-.drawer-bg{
-  position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:98;
-  opacity:0;visibility:hidden;transition:opacity .4s, visibility .4s;
-  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
-}
+.drawer a.dlnk:hover{color:var(--purple-light);padding-left:6px}
+.drawer a.dlnk small{font-size:11px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.drawer-foot{margin-top:auto;padding-top:24px;border-top:1px solid var(--line)}
+.drawer-foot .lbl{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;font-weight:600}
+.drawer-foot a{font-size:16px;font-weight:600;color:var(--paper);display:block;padding:5px 0;transition:color .25s}
+.drawer-foot a:hover{color:var(--purple-light)}
+.drawer-bg{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:98;opacity:0;visibility:hidden;transition:opacity .4s, visibility .4s;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
 .drawer-bg.open{opacity:1;visibility:visible}
 
 @media (max-width:980px){
-  .nav-inner{grid-template-columns:auto 1fr auto;gap:16px;padding:16px 20px}
+  .nav-inner{grid-template-columns:auto 1fr auto;gap:14px;padding:16px 22px}
   .nav-links{display:none}
-  .nav-status{display:none}
   .nav-cta{display:none}
   .nav-burger{display:flex}
 }
 
 /* ============= HERO ============= */
 .hero{
-  padding:140px 40px 90px;
-  border-bottom:1px solid var(--line);
-  position:relative;overflow:hidden;
-  min-height:100vh;
-  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:170px 32px 60px;
+  position:relative;
 }
-.hero::before{
-  content:"";position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse 60% 50% at 75% 25%,rgba(129,105,181,.13),transparent 60%),
-    radial-gradient(ellipse 50% 50% at 15% 85%,rgba(129,105,181,.06),transparent 60%);
-  pointer-events:none;
+.hero-inner{max-width:1480px;margin:0 auto}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:48px;
 }
-.hero::after{
-  content:"";position:absolute;inset:0;
-  background-image:
-    linear-gradient(var(--line) 1px,transparent 1px),
-    linear-gradient(90deg,var(--line) 1px,transparent 1px);
-  background-size:90px 90px;
-  mask-image:radial-gradient(ellipse at center,black 25%,transparent 75%);
-  -webkit-mask-image:radial-gradient(ellipse at center,black 25%,transparent 75%);
-  pointer-events:none;
-}
-.hero-inner{max-width:1340px;margin:0 auto;width:100%;position:relative;z-index:2}
-
-.hero-meta{
-  display:flex;justify-content:space-between;align-items:center;
-  padding-bottom:32px;border-bottom:1px solid var(--line);
-  font-size:11.5px;color:var(--muted);letter-spacing:.06em;
-}
-.hero-meta .left{display:flex;gap:32px;flex-wrap:wrap}
-.hero-meta strong{color:var(--paper);font-weight:500}
-.hero-meta .live{display:flex;align-items:center;gap:8px}
-.hero-meta .live .ld{width:6px;height:6px;background:var(--purple);border-radius:50%;animation:pulseDot 2s infinite}
+.hero-eyebrow::before{content:"";width:28px;height:1px;background:var(--paper)}
 
 .hero-title{
-  font-family:'Fraunces',serif;
-  font-weight:300;
-  font-size:clamp(50px,9vw,148px);
-  line-height:.95;
-  letter-spacing:-.038em;
-  margin:60px 0 48px;
-  max-width:1240px;
+  font-family:'Inter',sans-serif;
+  font-weight:700;
+  font-size:clamp(56px,11vw,196px);
+  line-height:.92;
+  letter-spacing:-.045em;
+  margin-bottom:48px;
+  max-width:1500px;
 }
-.hero-title em{font-style:italic;font-weight:300;color:var(--purple-light);font-feature-settings:"ss01"}
-.hero-title .word{display:inline-block;overflow:hidden;vertical-align:top;line-height:1}
-.hero-title .word > span{display:inline-block;transform:translateY(110%);transition:transform 1.05s var(--easing-out)}
+.hero-title em{font-style:normal;color:var(--purple)}
+.hero-title .word{display:inline-block;overflow:hidden;vertical-align:top;line-height:.92}
+.hero-title .word > span{display:inline-block;transform:translateY(110%);transition:transform 1s var(--easing-out)}
 .hero-title.in .word > span{transform:translateY(0)}
 .hero-title.in .word:nth-child(1) > span{transition-delay:.05s}
 .hero-title.in .word:nth-child(2) > span{transition-delay:.13s}
@@ -211,25 +159,21 @@ header.nav.scrolled{
 .hero-title.in .word:nth-child(4) > span{transition-delay:.29s}
 .hero-title.in .word:nth-child(5) > span{transition-delay:.37s}
 .hero-title.in .word:nth-child(6) > span{transition-delay:.45s}
-.hero-title.in .word:nth-child(7) > span{transition-delay:.53s}
-.hero-title.in .word:nth-child(8) > span{transition-delay:.61s}
-.hero-title.in .word:nth-child(9) > span{transition-delay:.69s}
 
 .hero-bottom{
-  display:grid;grid-template-columns:1.4fr 1fr;gap:60px;
+  display:grid;grid-template-columns:1.6fr 1fr;gap:60px;align-items:end;
   padding-top:36px;border-top:1px solid var(--line);
-  align-items:end;
   opacity:0;transform:translateY(20px);
-  transition:opacity .9s var(--easing-out) .9s, transform .9s var(--easing-out) .9s;
+  transition:opacity 1s var(--easing-out) .85s, transform 1s var(--easing-out) .85s;
 }
 .hero-bottom.in{opacity:1;transform:translateY(0)}
-.hero-lead{font-size:17px;line-height:1.55;color:var(--paper);max-width:520px}
-.hero-actions{display:flex;gap:14px;justify-content:flex-end;flex-wrap:wrap}
+.hero-lead{font-size:19px;line-height:1.5;color:var(--paper);max-width:580px;font-weight:400}
+.hero-actions{display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap}
 
 .btn{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:14px 22px;border-radius:100px;
-  font-size:13.5px;font-weight:500;letter-spacing:.005em;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:15px 24px;border-radius:100px;
+  font-size:14px;font-weight:600;letter-spacing:-.005em;
   transition:all .35s var(--easing-out);
   position:relative;overflow:hidden;
   white-space:nowrap;
@@ -242,344 +186,202 @@ header.nav.scrolled{
 }
 .btn-primary:hover::before{transform:translateY(0)}
 .btn-primary:hover{color:var(--paper);transform:translateY(-1px)}
-.btn-ghost{border:1px solid var(--line-strong);color:var(--paper)}
-.btn-ghost:hover{border-color:var(--purple);background:var(--purple-glow);transform:translateY(-1px)}
+.btn-ghost{border:1px solid var(--line-2);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--paper);background:var(--paper);color:var(--ink);transform:translateY(-1px)}
 .btn svg{width:14px;height:14px;transition:transform .4s var(--easing-out)}
 .btn:hover svg{transform:translate(3px,-2px)}
 
-/* Hero scroll indicator */
-.hero-scroll{
-  position:absolute;left:40px;bottom:30px;z-index:3;
-  display:flex;flex-direction:column;align-items:flex-start;gap:14px;
-  font-size:10px;letter-spacing:.32em;color:var(--muted);text-transform:uppercase;
-  opacity:0;transition:opacity 1s var(--easing-out) 1.5s;
-}
-.hero-scroll.in{opacity:1}
-.hero-scroll .ln{width:1px;height:40px;background:var(--line-2);position:relative;overflow:hidden}
-.hero-scroll .ln::after{
-  content:"";position:absolute;top:-100%;left:0;right:0;height:50%;
-  background:linear-gradient(180deg,transparent,var(--purple-light));
-  animation:scrollLn 2.4s var(--easing) infinite;
-}
-@keyframes scrollLn{0%{top:-50%}100%{top:100%}}
-
 @media (max-width:760px){
-  .hero{padding:120px 24px 70px;min-height:auto}
-  .hero-meta{font-size:10.5px;flex-direction:column;align-items:flex-start;gap:14px;padding-bottom:24px}
-  .hero-meta .left{gap:14px}
-  .hero-title{margin:40px 0 32px}
-  .hero-bottom{grid-template-columns:1fr;gap:28px;padding-top:28px}
+  .hero{padding:120px 22px 40px}
+  .hero-eyebrow{margin-bottom:32px;font-size:11px}
+  .hero-title{margin-bottom:36px}
+  .hero-bottom{grid-template-columns:1fr;gap:28px;padding-top:24px}
   .hero-actions{justify-content:flex-start;width:100%}
   .hero-actions .btn{flex:1;justify-content:center;min-width:0}
-  .hero-scroll{display:none}
+  .hero-lead{font-size:17px}
 }
 
-/* ============= LOGO STAGE ============= */
-.logo-section{
-  padding:90px 40px 110px;
-  background:var(--ink-2);
-  border-bottom:1px solid var(--line);
-  position:relative;overflow:hidden;
+/* ============= STATS ============= */
+.stats{padding:80px 32px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats-inner{
+  max-width:1480px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:32px;
 }
-.logo-section::before{
-  content:"";position:absolute;width:600px;height:600px;
-  left:50%;top:50%;transform:translate(-50%,-50%);
-  background:radial-gradient(circle,rgba(129,105,181,.07),transparent 70%);
-  pointer-events:none;
+.stat{display:flex;flex-direction:column;gap:10px}
+.stat .num{
+  font-family:'Inter';font-weight:700;
+  font-size:clamp(56px,7vw,108px);line-height:.95;letter-spacing:-.05em;
+  display:flex;align-items:baseline;
 }
-.logo-stage{
-  max-width:1340px;margin:0 auto;
-  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:40px;
-  position:relative;z-index:2;perspective:1200px;
-}
-.logo-stage .meta{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);line-height:1.7}
-.logo-stage .meta strong{color:var(--paper);font-weight:500;font-family:'Fraunces';font-style:italic;font-size:15px;letter-spacing:0;text-transform:none;display:block;margin-top:4px}
-.logo-stage .meta.right{text-align:right}
-.logo-mark-wrap{transform-style:preserve-3d}
-.logo-mark{
-  width:240px;height:260px;margin:0 auto;
-  filter:drop-shadow(0 35px 70px rgba(129,105,181,.28));
-  transition:transform .7s var(--easing-out);
-}
-@media (max-width:760px){
-  .logo-section{padding:60px 24px 70px}
-  .logo-stage{grid-template-columns:1fr;gap:24px;text-align:center}
-  .logo-stage .meta,.logo-stage .meta.right{text-align:center}
-  .logo-mark{width:170px;height:185px}
+.stat .num .suffix{color:var(--purple);font-weight:600}
+.stat .label{font-size:13px;font-weight:500;color:var(--muted);letter-spacing:-.005em;line-height:1.45;max-width:240px}
+
+@media (max-width:880px){
+  .stats{padding:50px 22px}
+  .stats-inner{grid-template-columns:1fr 1fr;gap:32px 24px}
+  .stat .num{font-size:54px}
+  .stat .label{font-size:12px}
 }
 
 /* ============= SECTIONS ============= */
-section{padding:130px 40px;border-bottom:1px solid var(--line);position:relative}
-.container{max-width:1340px;margin:0 auto}
-.section-label{
-  display:inline-flex;align-items:center;gap:10px;
-  font-size:10.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);
-  padding:6px 0 14px;margin-bottom:48px;
-  position:relative;
+section{padding:120px 32px;position:relative}
+.container{max-width:1480px;margin:0 auto}
+
+.kicker{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:36px;
 }
-.section-label::before{
-  content:"";width:24px;height:1px;background:var(--purple);
+.kicker::before{content:"";width:24px;height:1px;background:var(--paper)}
+
+.h-big{
+  font-family:'Inter',sans-serif;font-weight:700;
+  font-size:clamp(40px,6.4vw,108px);line-height:.95;letter-spacing:-.04em;
+  max-width:1300px;
 }
-.section-label.center{justify-content:center}
-.section-title{
-  font-family:'Fraunces',serif;font-weight:300;
-  font-size:clamp(38px,5.6vw,82px);line-height:1.02;letter-spacing:-.034em;
-  max-width:1100px;
-}
-.section-title em{font-style:italic;font-weight:300;color:var(--purple-light)}
-.section-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:80px}
-.section-head .meta{font-size:14.5px;line-height:1.6;color:var(--muted);max-width:440px;justify-self:end;align-self:end}
+.h-big em{font-style:normal;color:var(--purple)}
+
+.section-head{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:end;margin-bottom:80px}
+.section-head .meta{font-size:16px;line-height:1.55;color:var(--muted);max-width:440px;justify-self:end;align-self:end}
+
 @media (max-width:880px){
-  section{padding:80px 24px}
+  section{padding:80px 22px}
   .section-head{grid-template-columns:1fr;gap:24px;margin-bottom:48px}
-  .section-head .meta{justify-self:start}
+  .section-head .meta{justify-self:start;font-size:14.5px}
 }
 
-/* Reveal */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--easing-out),transform .9s var(--easing-out)}
 .reveal.in{opacity:1;transform:translateY(0)}
 
-/* ============= NUMBERS ============= */
-.numbers{padding:110px 40px;background:var(--ink-2);border-bottom:1px solid var(--line)}
-.numbers-grid{
-  max-width:1340px;margin:0 auto;
-  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
-  border-top:1px solid var(--line-2);
-  position:relative;
+/* ============= MOSAIC ============= */
+.mosaic-section{padding:120px 32px;background:var(--ink)}
+.mosaic{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;max-width:1480px;margin:0 auto}
+.tile{
+  border-radius:24px;padding:36px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  min-height:340px;position:relative;overflow:hidden;
+  transition:transform .55s var(--easing-out);
+  cursor:pointer;
 }
-.numbers-grid::after{
-  content:"";position:absolute;top:0;left:0;width:0;height:1px;
-  background:var(--purple);transition:width 1.6s var(--easing-out) .2s;
-}
-.numbers-grid.in::after{width:100%}
-.num-cell{
-  padding:48px 32px 0 0;
-  border-right:1px solid var(--line-2);
-  position:relative;
-}
-.num-cell:last-child{border-right:none}
-.num-cell .num{
-  font-family:'Fraunces',serif;font-weight:300;
-  font-size:clamp(54px,5.4vw,92px);line-height:1;letter-spacing:-.045em;
-  display:flex;align-items:baseline;gap:6px;
-}
-.num-cell .num .suffix{color:var(--purple-light);font-size:.55em;font-weight:400;font-style:italic}
-.num-cell .label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:18px}
-.num-cell .desc{font-size:13.5px;color:var(--paper);opacity:.7;margin-top:12px;line-height:1.5;max-width:240px}
-@media (max-width:880px){
-  .numbers{padding:70px 24px}
-  .numbers-grid{grid-template-columns:1fr 1fr;gap:0}
-  .num-cell{border-right:none;border-bottom:1px solid var(--line-2);padding:30px 18px 30px 0}
-  .num-cell:nth-child(odd){border-right:1px solid var(--line-2);padding-right:18px}
-  .num-cell:nth-child(even){padding-left:18px;padding-right:0}
-  .num-cell:last-child,.num-cell:nth-last-child(2){border-bottom:none}
-  .num-cell .num{font-size:48px}
-  .num-cell .desc{font-size:12.5px}
-}
-
-/* ============= SERVICES ============= */
-.services-list{border-top:1px solid var(--line)}
-.service-item{
-  display:grid;grid-template-columns:80px 1.2fr 1.8fr 80px;
-  gap:40px;align-items:start;
-  padding:40px 0;
-  border-bottom:1px solid var(--line);
-  position:relative;
-  transition:padding .5s var(--easing-out);
-}
-.service-item::before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg,rgba(129,105,181,.08),transparent 60%);
-  opacity:0;transition:opacity .4s;pointer-events:none;
-}
-.service-item::after{
-  content:"";position:absolute;left:0;top:0;width:0;height:1px;
-  background:var(--purple);transition:width .6s var(--easing-out);
-}
-.service-item:hover{padding:52px 0}
-.service-item:hover::before{opacity:1}
-.service-item:hover::after{width:100%}
-.service-item > *{position:relative;z-index:1}
-.service-item .num{
-  font-family:'Fraunces';font-style:italic;font-weight:400;font-size:14px;
-  color:var(--muted);letter-spacing:.04em;padding-top:8px;
-  transition:color .35s, transform .5s var(--easing-out);
-}
-.service-item:hover .num{color:var(--purple-light);transform:translateX(4px)}
-.service-item h3{
-  font-family:'Fraunces',serif;font-weight:400;
-  font-size:clamp(22px,2.1vw,32px);line-height:1.1;letter-spacing:-.02em;
-  transition:transform .5s var(--easing-out);
-}
-.service-item:hover h3{transform:translateX(8px)}
-.service-item p{font-size:14.5px;line-height:1.6;color:var(--muted);max-width:520px}
-.service-item .arrow{
-  width:42px;height:42px;border:1px solid var(--line-strong);border-radius:50%;
+.tile:hover{transform:translateY(-6px)}
+.tile h3{font-family:'Inter';font-weight:700;font-size:32px;line-height:1;letter-spacing:-.03em;margin-bottom:12px}
+.tile p{font-size:14.5px;line-height:1.5;max-width:340px}
+.tile .tile-num{font-size:13px;font-weight:600;letter-spacing:.04em;opacity:.7}
+.tile .tile-arrow{
+  align-self:flex-end;width:38px;height:38px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;
-  transition:all .5s var(--easing-out);justify-self:end;color:var(--paper);
-  flex-shrink:0;
+  background:rgba(0,0,0,.12);
+  transition:all .4s var(--easing-out);margin-top:auto;
 }
-.service-item:hover .arrow{background:var(--purple);border-color:var(--purple);transform:rotate(45deg) scale(1.05)}
-.service-item .arrow svg{width:14px;height:14px}
+.tile:hover .tile-arrow{background:rgba(0,0,0,.22);transform:rotate(45deg)}
+.tile .tile-arrow svg{width:14px;height:14px}
 
-@media (max-width:880px){
-  .service-item{grid-template-columns:36px 1fr 36px;gap:14px;padding:24px 0;align-items:center}
-  .service-item:hover{padding:30px 0}
-  .service-item h3{font-size:19px}
-  .service-item p{grid-column:1/-1;margin-top:6px;font-size:13.5px}
-  .service-item .arrow{width:36px;height:36px}
-  .service-item .arrow svg{width:12px;height:12px}
-  .service-item .num{padding-top:0;font-size:12.5px}
+.tile.t-purple{background:var(--purple);color:#fff;grid-column:span 3}
+.tile.t-purple p,.tile.t-purple .tile-num{color:rgba(255,255,255,.85)}
+.tile.t-purple .tile-arrow{background:rgba(255,255,255,.18)}
+.tile.t-purple:hover .tile-arrow{background:rgba(255,255,255,.3)}
+
+.tile.t-paper{background:var(--paper);color:var(--ink);grid-column:span 3}
+.tile.t-paper p,.tile.t-paper .tile-num{color:var(--muted-2)}
+
+.tile.t-soft{background:var(--purple-soft);color:var(--purple-dark);grid-column:span 2}
+.tile.t-soft p{color:var(--purple-dark);opacity:.8}
+
+.tile.t-darkcard{background:var(--ink-3);color:var(--paper);grid-column:span 2;border:1px solid var(--line-2)}
+.tile.t-darkcard p,.tile.t-darkcard .tile-num{color:var(--muted)}
+.tile.t-darkcard .tile-arrow{background:rgba(242,239,232,.08)}
+.tile.t-darkcard:hover .tile-arrow{background:rgba(242,239,232,.16)}
+
+.tile.t-purpledark{background:var(--purple-dark);color:#fff;grid-column:span 2}
+.tile.t-purpledark p,.tile.t-purpledark .tile-num{color:rgba(255,255,255,.8)}
+.tile.t-purpledark .tile-arrow{background:rgba(255,255,255,.18)}
+
+@media (max-width:1100px){
+  .mosaic{grid-template-columns:repeat(2,1fr)}
+  .tile.t-purple,.tile.t-paper,.tile.t-soft,.tile.t-darkcard,.tile.t-purpledark{grid-column:span 1}
+}
+@media (max-width:600px){
+  .mosaic-section{padding:70px 22px}
+  .mosaic{grid-template-columns:1fr;gap:12px}
+  .tile{min-height:240px;padding:28px;border-radius:20px}
+  .tile h3{font-size:26px}
+}
+
+/* ============= PROJECTS ============= */
+.projects{padding:120px 32px;background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1480px;margin:0 auto}
+.project-card{
+  border-radius:24px;overflow:hidden;background:var(--ink-3);
+  transition:transform .5s var(--easing-out);cursor:pointer;display:block;
+  border:1px solid var(--line);
+}
+.project-card:hover{transform:translateY(-6px);border-color:var(--line-2)}
+.project-card .visual{width:100%;aspect-ratio:4/3;position:relative;overflow:hidden}
+.project-card .visual svg{width:100%;height:100%;display:block;transition:transform .8s var(--easing-out)}
+.project-card:hover .visual svg{transform:scale(1.04)}
+.project-card .info{padding:24px}
+.project-card .info-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);font-weight:500;letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
+.project-card h3{font-family:'Inter';font-weight:700;font-size:22px;line-height:1.15;letter-spacing:-.02em;margin-bottom:10px}
+.project-card .meta{font-size:13.5px;color:var(--muted);line-height:1.5}
+.project-card .arrow{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:13px;font-weight:600;color:var(--paper);
+  margin-top:18px;letter-spacing:-.005em;
+  transition:gap .35s var(--easing-out),color .35s;
+}
+.project-card:hover .arrow{gap:12px;color:var(--purple-light)}
+.project-card .arrow svg{width:13px;height:13px}
+
+@media (max-width:1024px){.projects-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:680px){
+  .projects{padding:70px 22px}
+  .projects-grid{grid-template-columns:1fr}
+  .project-card .info{padding:20px}
 }
 
 /* ============= ABOUT ============= */
-.about{background:var(--ink-2)}
-.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:90px;align-items:start}
-.about-text h2{margin-bottom:40px}
-.about-text p{font-size:16.5px;line-height:1.65;color:var(--paper);margin-bottom:22px;max-width:580px}
+.about{padding:140px 32px;background:var(--ink)}
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:90px;align-items:start;max-width:1480px;margin:0 auto}
+.about-text p{font-size:19px;line-height:1.5;color:var(--paper);margin-bottom:24px;max-width:680px}
 .about-text p strong{font-weight:600}
-.about-text p.lead-p{color:var(--paper);opacity:.88;font-size:18px;line-height:1.55;font-weight:300}
-.about-text p.lead-p::first-letter{
-  font-family:'Fraunces',serif;font-weight:400;font-style:italic;
-  font-size:54px;color:var(--purple-light);
-  float:left;line-height:.85;padding:6px 12px 0 0;
-}
+.about-text p.lead-p{font-size:clamp(28px,3.5vw,44px);line-height:1.18;letter-spacing:-.025em;font-weight:600;max-width:780px;margin-bottom:36px}
+.about-text p.lead-p em{font-style:normal;color:var(--purple)}
 
 .about-side{
   position:sticky;top:120px;
   background:var(--ink-3);
-  padding:36px;border:1px solid var(--line);
-  border-radius:6px;
+  padding:32px;border-radius:20px;border:1px solid var(--line);
 }
-.about-side h4{
-  font-family:'Inter';font-weight:500;font-size:10.5px;letter-spacing:.28em;
-  text-transform:uppercase;color:var(--muted);margin-bottom:22px;
-  display:flex;align-items:center;gap:10px;
-}
-.about-side h4::before{content:"";width:24px;height:1px;background:var(--purple)}
+.about-side h4{font-family:'Inter';font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
 .value-row{
   padding:18px 0;border-bottom:1px solid var(--line);
-  display:grid;grid-template-columns:30px 1fr;gap:14px;align-items:start;
-  cursor:pointer;
+  display:grid;grid-template-columns:30px 1fr;gap:16px;align-items:start;
   transition:padding-left .4s var(--easing-out);
 }
 .value-row:last-child{border-bottom:none}
-.value-row:hover{padding-left:8px}
-.value-row .idx{
-  font-family:'Fraunces';font-style:italic;font-weight:400;
-  color:var(--purple-light);font-size:14px;transition:color .3s;
-}
-.value-row:hover .idx{color:var(--purple)}
-.value-row h5{font-family:'Inter';font-weight:600;font-size:14.5px;margin-bottom:4px;color:var(--paper)}
-.value-row p{font-size:13px;line-height:1.55;color:var(--muted);margin:0}
+.value-row:hover{padding-left:6px}
+.value-row .idx{font-family:'Inter';font-weight:700;color:var(--purple-light);font-size:14px;letter-spacing:-.02em}
+.value-row h5{font-family:'Inter';font-weight:600;font-size:16px;margin-bottom:4px;letter-spacing:-.01em;color:var(--paper)}
+.value-row p{font-size:13.5px;line-height:1.55;color:var(--muted);margin:0}
 
 @media (max-width:1000px){
+  .about{padding:80px 22px}
   .about-grid{grid-template-columns:1fr;gap:50px}
   .about-side{position:static;padding:28px}
-  .about-text p.lead-p{font-size:17px}
-  .about-text p{font-size:15.5px}
 }
-
-/* ============= PROJECTS ============= */
-.projects{background:var(--ink);overflow:hidden}
-.project-row{
-  display:grid;grid-template-columns:60px 1.4fr 1fr 1fr 60px;gap:28px;
-  align-items:center;padding:32px 0;border-top:1px solid var(--line);
-  transition:padding .55s var(--easing-out);
-  position:relative;
-}
-.project-row:last-child{border-bottom:1px solid var(--line)}
-.project-row::before{
-  content:"";position:absolute;left:0;top:0;width:0;height:1px;
-  background:var(--purple);transition:width .65s var(--easing-out);
-}
-.project-row:hover{padding:46px 0}
-.project-row:hover::before{width:100%}
-.project-row .num{font-family:'Fraunces';font-style:italic;font-weight:400;font-size:14px;color:var(--muted);transition:color .35s,transform .5s var(--easing-out)}
-.project-row:hover .num{color:var(--purple-light);transform:translateX(4px)}
-.project-row .title{
-  font-family:'Fraunces',serif;font-weight:400;
-  font-size:clamp(22px,2.4vw,34px);line-height:1.1;letter-spacing:-.02em;
-  transition:color .35s, transform .5s var(--easing-out);
-}
-.project-row:hover .title{color:var(--purple-light);transform:translateX(8px)}
-.project-row .type,.project-row .place{font-size:12.5px;color:var(--muted);letter-spacing:.02em}
-.project-row .arrow{
-  justify-self:end;
-  width:42px;height:42px;border:1px solid var(--line-strong);border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  transition:all .5s var(--easing-out);color:var(--paper);
-}
-.project-row:hover .arrow{background:var(--purple);border-color:var(--purple);transform:rotate(45deg) scale(1.05)}
-.project-row .arrow svg{width:14px;height:14px}
-
-/* Mobile: inline preview block */
-.project-mobile-img{display:none}
-
-@media (max-width:880px){
-  .project-row{
-    grid-template-columns:1fr;gap:14px;padding:22px 0;
-  }
-  .project-row:hover{padding:24px 0}
-  .project-row .meta-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:11px;color:var(--muted);letter-spacing:.04em}
-  .project-row .meta-row span{font-family:'Fraunces';font-style:italic}
-  .project-row .meta-row .sep{width:3px;height:3px;background:var(--muted);border-radius:50%}
-  .project-row .num{font-size:12px;letter-spacing:.18em}
-  .project-row .type,.project-row .place{display:none}
-  .project-row .arrow{display:none}
-  .project-mobile-img{
-    display:block;width:100%;height:170px;border-radius:6px;margin-top:6px;
-    position:relative;overflow:hidden;
-    background-size:cover;background-position:center;
-  }
-  .project-mobile-img::after{
-    content:"";position:absolute;inset:0;
-    background:linear-gradient(135deg,rgba(129,105,181,.3),rgba(0,0,0,.3));
-  }
-  .project-mobile-img .lbl{
-    position:absolute;bottom:14px;left:16px;right:16px;z-index:2;
-    font-family:'Fraunces';font-style:italic;font-size:14px;color:var(--paper);
-    display:flex;justify-content:space-between;align-items:center;
-  }
-  .project-mobile-img .lbl span:last-child{
-    width:30px;height:30px;border:1px solid rgba(255,255,255,.4);border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-  }
-  .project-mobile-img .lbl svg{width:12px;height:12px}
-}
-
-/* Project preview floating (desktop) */
-.project-preview{
-  position:fixed;width:340px;height:240px;
-  pointer-events:none;z-index:300;
-  opacity:0;transform:translate(-50%,-50%) scale(.92);
-  transition:opacity .35s var(--easing-out),transform .35s var(--easing-out);
-  border:1px solid var(--line-strong);border-radius:6px;overflow:hidden;
-  box-shadow:0 30px 80px rgba(0,0,0,.5);
-}
-.project-preview.show{opacity:1;transform:translate(-50%,-50%) scale(1)}
-.project-preview .ph{
-  width:100%;height:100%;
-  background-size:cover;background-position:center;
-  position:relative;
-}
-.project-preview .ph::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(129,105,181,.3),rgba(11,11,14,.55));
-}
-.project-preview .lbl{
-  position:absolute;bottom:14px;left:16px;
-  font-family:'Fraunces';font-style:italic;font-size:14px;
-  color:var(--paper);z-index:2;letter-spacing:.005em;
-}
-@media (max-width:880px){.project-preview{display:none}}
 
 /* ============= PROCESS ============= */
-.process{background:var(--ink-2)}
+.process{padding:120px 32px;background:var(--paper);color:var(--ink)}
+.process .container{max-width:1480px}
+.process .h-big{color:var(--ink)}
+.process .h-big em{color:var(--purple)}
+.process .meta{color:var(--muted-2)}
+.process .kicker{color:var(--muted-2)}
+.process .kicker::before{background:var(--ink)}
+
 .process-grid{
   display:grid;grid-template-columns:repeat(4,1fr);gap:0;
-  border-top:1px solid var(--line-2);
-  position:relative;
+  border-top:1px solid rgba(10,10,10,.15);position:relative;
 }
 .process-grid::before{
   content:"";position:absolute;top:0;left:0;width:0;height:1px;
@@ -587,51 +389,35 @@ section{padding:130px 40px;border-bottom:1px solid var(--line);position:relative
 }
 .process-grid.in::before{width:100%}
 .process-cell{
-  padding:40px 28px 40px 0;
-  border-right:1px solid var(--line);
-  position:relative;
+  padding:42px 28px 42px 0;
+  border-right:1px solid rgba(10,10,10,.1);position:relative;
   transition:background .4s, padding-top .45s var(--easing-out);
 }
 .process-cell:last-child{border-right:none}
-.process-cell:hover{background:rgba(129,105,181,.05);padding-top:30px}
-.process-cell .step-num{
-  font-family:'Fraunces';font-style:italic;font-weight:400;
-  font-size:13.5px;color:var(--purple-light);margin-bottom:48px;
-  display:flex;align-items:center;gap:10px;letter-spacing:.02em;
-}
-.process-cell .step-num::before{
-  content:"";width:6px;height:6px;background:var(--purple);border-radius:50%;
-  transition:transform .35s, box-shadow .35s;
-}
-.process-cell:hover .step-num::before{transform:scale(1.5);box-shadow:0 0 0 4px rgba(129,105,181,.2)}
-.process-cell h3{
-  font-family:'Fraunces',serif;font-weight:400;
-  font-size:23px;letter-spacing:-.02em;margin-bottom:14px;
-  transition:transform .45s var(--easing-out);
-}
+.process-cell:hover{background:rgba(129,105,181,.06);padding-top:32px}
+.process-cell .step-num{font-family:'Inter';font-weight:600;font-size:13px;color:var(--purple);margin-bottom:48px;letter-spacing:.05em}
+.process-cell h3{font-family:'Inter';font-weight:700;font-size:26px;letter-spacing:-.025em;margin-bottom:14px;transition:transform .45s var(--easing-out)}
 .process-cell:hover h3{transform:translateY(-2px)}
-.process-cell p{font-size:13.5px;line-height:1.6;color:var(--muted)}
+.process-cell p{font-size:14.5px;line-height:1.6;color:var(--muted-2)}
 
-/* Mobile vertical timeline */
 @media (max-width:880px){
-  .process-grid{grid-template-columns:1fr;border-top:none;padding-left:32px;position:relative}
+  .process{padding:80px 22px}
+  .process-grid{grid-template-columns:1fr;border-top:none;padding-left:32px}
   .process-grid::before{display:none}
   .process-grid::after{
     content:"";position:absolute;left:6px;top:8px;bottom:8px;width:1px;
-    background:linear-gradient(180deg,var(--purple) 0%,var(--line-2) 100%);
+    background:linear-gradient(180deg,var(--purple) 0%,rgba(10,10,10,.15) 100%);
   }
-  .process-cell{
-    border-right:none;border-bottom:none;padding:18px 0 26px;position:relative;
-  }
-  .process-cell:not(:last-child){border-bottom:1px solid var(--line)}
-  .process-cell:hover{padding-top:18px;background:transparent}
+  .process-cell{border-right:none;border-bottom:none;padding:20px 0 28px}
+  .process-cell:not(:last-child){border-bottom:1px solid rgba(10,10,10,.1)}
+  .process-cell:hover{padding-top:20px;background:transparent}
   .process-cell::before{
-    content:"";position:absolute;left:-32px;top:24px;
-    width:13px;height:13px;border-radius:50%;background:var(--ink-2);
+    content:"";position:absolute;left:-32px;top:26px;
+    width:13px;height:13px;border-radius:50%;background:var(--paper);
     border:1.5px solid var(--purple);
   }
   .process-cell::after{
-    content:"";position:absolute;left:-29px;top:27px;
+    content:"";position:absolute;left:-29px;top:29px;
     width:7px;height:7px;border-radius:50%;background:var(--purple);
     transform:scale(0);transition:transform .4s var(--easing-out);
   }
@@ -644,89 +430,95 @@ section{padding:130px 40px;border-bottom:1px solid var(--line);position:relative
 }
 
 /* ============= TESTIMONIAL ============= */
-.testimonial{background:var(--ink);text-align:left;padding:140px 40px}
-.testimonial .container{max-width:1100px;margin:0 auto}
+.testimonial{padding:140px 32px;background:var(--ink)}
+.testimonial .container{max-width:1100px;margin:0 auto;text-align:center}
 .testimonial blockquote{
-  font-family:'Fraunces',serif;font-weight:300;
-  font-size:clamp(28px,4vw,52px);line-height:1.18;letter-spacing:-.025em;
-  margin:48px 0;color:var(--paper);position:relative;
+  font-family:'Inter';font-weight:600;
+  font-size:clamp(28px,4vw,52px);line-height:1.2;letter-spacing:-.03em;
+  margin:32px auto;color:var(--paper);max-width:1000px;
 }
-.testimonial blockquote::before{
-  content:"\201C";position:absolute;left:-50px;top:-40px;
-  font-size:140px;font-family:'Fraunces',serif;color:var(--purple);opacity:.35;
-  line-height:1;font-weight:300;font-style:italic;
-}
-.testimonial blockquote em{font-style:italic;color:var(--purple-light);font-weight:300}
-.testimonial .author{display:flex;align-items:center;gap:18px;padding-top:32px;border-top:1px solid var(--line)}
+.testimonial blockquote em{font-style:normal;color:var(--purple)}
+.testimonial .author{display:inline-flex;align-items:center;gap:14px;padding-top:24px;margin-top:24px;border-top:1px solid var(--line)}
 .author-photo{
-  width:54px;height:54px;border-radius:50%;
-  background:linear-gradient(135deg,var(--purple),var(--purple-dark));
-  color:var(--paper);
+  width:48px;height:48px;border-radius:50%;
+  background:var(--purple);color:var(--paper);
   display:flex;align-items:center;justify-content:center;
-  font-family:'Fraunces';font-weight:400;font-size:18px;
+  font-family:'Inter';font-weight:600;font-size:16px;
 }
-.author-info .name{font-family:'Inter';font-weight:600;font-size:15px;color:var(--paper)}
-.author-info .role{font-size:13px;color:var(--muted);margin-top:2px;font-family:'Fraunces';font-style:italic}
+.author-info{text-align:left}
+.author-info .name{font-family:'Inter';font-weight:600;font-size:15px}
+.author-info .role{font-size:13px;color:var(--muted);margin-top:2px}
 
-/* Test mini-rating */
-.testimonial .rating{
-  display:inline-flex;gap:4px;margin-bottom:8px;
-  font-family:'Fraunces';font-style:italic;font-size:13px;color:var(--purple-light);
+/* ============= CTA BIG ============= */
+.cta-big{padding:60px 32px 120px;background:var(--ink)}
+.cta-big .container{max-width:1480px;margin:0 auto}
+.cta-big .card{
+  background:var(--purple);color:#fff;
+  border-radius:32px;padding:90px 80px;
+  display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:end;
+  position:relative;overflow:hidden;
 }
-.testimonial .rating::before{content:"★ ★ ★ ★ ★";letter-spacing:3px}
+.cta-big .card::before{
+  content:"";position:absolute;top:-150px;right:-120px;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.15),transparent 70%);
+}
+.cta-big h2{
+  font-family:'Inter';font-weight:700;
+  font-size:clamp(40px,5.6vw,84px);line-height:.95;letter-spacing:-.04em;
+  margin-bottom:18px;position:relative;z-index:2;
+}
+.cta-big h2 em{font-style:normal;color:rgba(255,255,255,.85)}
+.cta-big p{font-size:17px;line-height:1.5;color:rgba(255,255,255,.85);max-width:480px;position:relative;z-index:2}
+.cta-big .actions{display:flex;flex-direction:column;gap:14px;align-items:flex-end;position:relative;z-index:2}
+.cta-big .actions .btn{align-self:flex-end}
+.cta-big .actions .btn-primary{background:var(--ink);color:var(--paper)}
+.cta-big .actions .btn-primary::before{background:var(--paper)}
+.cta-big .actions .btn-primary:hover{color:var(--ink)}
+.cta-big .actions .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.cta-big .actions .btn-ghost:hover{background:#fff;color:var(--purple-dark);border-color:#fff}
 
-@media (max-width:680px){
-  .testimonial{padding:80px 24px}
-  .testimonial blockquote::before{left:-8px;top:-30px;font-size:90px}
+@media (max-width:880px){
+  .cta-big{padding:40px 22px 60px}
+  .cta-big .card{padding:48px 32px;grid-template-columns:1fr;gap:36px;border-radius:24px}
+  .cta-big .actions{align-items:stretch}
+  .cta-big .actions .btn{justify-content:center;align-self:stretch}
 }
 
 /* ============= CONTACT ============= */
-.contact{background:var(--ink-2);color:var(--paper);padding:140px 40px 80px;border-bottom:none}
-.contact .container{max-width:1340px;margin:0 auto}
-.contact h2{
-  font-family:'Fraunces',serif;font-weight:300;
-  font-size:clamp(46px,7vw,118px);line-height:.95;letter-spacing:-.035em;
-  max-width:1100px;margin-bottom:60px;
-}
-.contact h2 em{font-style:italic;color:var(--purple-light);font-weight:300}
-
-.contact-grid{
-  display:grid;grid-template-columns:1.2fr 1fr;gap:80px;
-  padding-top:60px;border-top:1px solid var(--line);
-}
+.contact{padding:120px 32px;background:var(--ink-2);border-top:1px solid var(--line)}
+.contact .container{max-width:1480px;margin:0 auto}
+.contact .h-big{margin-bottom:60px}
+.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;padding-top:48px;border-top:1px solid var(--line)}
 .contact-info-row{
   display:grid;grid-template-columns:160px 1fr;gap:24px;
-  padding:22px 0;border-bottom:1px solid var(--line);
-  align-items:baseline;
-  transition:padding-left .4s var(--easing-out);
+  padding:20px 0;border-bottom:1px solid var(--line);
+  align-items:baseline;transition:padding-left .4s var(--easing-out);
 }
 .contact-info-row:hover{padding-left:8px}
-.contact-info-row .label{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
-.contact-info-row .val{font-size:15.5px;color:var(--paper)}
+.contact-info-row .label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.contact-info-row .val{font-size:16px;color:var(--paper);font-weight:500}
 .contact-info-row .val a:hover{color:var(--purple-light)}
 
-.contact-form{display:flex;flex-direction:column;gap:22px}
-.contact-form .row{display:flex;flex-direction:column;gap:8px;position:relative}
-.contact-form label{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.contact-form{display:flex;flex-direction:column;gap:20px}
+.contact-form .row{display:flex;flex-direction:column;gap:8px}
+.contact-form label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:600}
 .contact-form input,.contact-form textarea,.contact-form select{
   background:transparent;border:none;border-bottom:1px solid var(--line-2);
-  padding:10px 0;color:var(--paper);font-family:inherit;font-size:15px;
-  transition:border-color .3s;
+  padding:12px 0;color:var(--paper);font-family:inherit;font-size:15.5px;
+  transition:border-color .3s;font-weight:500;
 }
-.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{
-  outline:none;border-bottom-color:var(--purple);
-}
-.contact-form input::placeholder,.contact-form textarea::placeholder{color:rgba(255,255,255,.28)}
-.contact-form select{appearance:none;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%238B8B95' stroke-width='1.5' fill='none'/></svg>") no-repeat right 4px center}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{outline:none;border-bottom-color:var(--purple)}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:rgba(242,239,232,.3);font-weight:400}
+.contact-form select{appearance:none;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%2384847C' stroke-width='1.5' fill='none'/></svg>") no-repeat right 4px center}
 .contact-form select option{background:var(--ink);color:var(--paper)}
 .contact-form textarea{resize:vertical;min-height:90px}
-.contact-grid-fields{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.contact-grid-fields{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .contact-form .submit{margin-top:8px;align-self:flex-start;background:var(--paper);color:var(--ink)}
-.contact-form .submit::before{background:var(--purple)}
 
 @media (max-width:880px){
-  .contact{padding:90px 24px 60px}
-  .contact-grid{grid-template-columns:1fr;gap:48px;padding-top:40px}
+  .contact{padding:80px 22px}
+  .contact-grid{grid-template-columns:1fr;gap:48px;padding-top:36px}
   .contact-grid-fields{grid-template-columns:1fr}
   .contact-info-row{grid-template-columns:1fr;gap:6px}
   .contact-info-row:hover{padding-left:0}
@@ -734,52 +526,35 @@ section{padding:130px 40px;border-bottom:1px solid var(--line);position:relative
 }
 
 /* ============= FOOTER ============= */
-footer{background:var(--ink);color:var(--muted);padding:60px 40px 32px;border-top:1px solid var(--line)}
-.footer-inner{max-width:1340px;margin:0 auto}
-.footer-grid{
-  display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:60px;
-  padding-bottom:48px;border-bottom:1px solid var(--line);
-}
-.footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:18px;color:var(--paper)}
-.footer-brand svg{width:34px;height:34px}
-.footer-brand .text{font-family:'Inter';font-weight:600;font-size:16px}
+footer{background:var(--ink);color:var(--muted);padding:60px 32px 32px;border-top:1px solid var(--line)}
+.footer-inner{max-width:1480px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:60px;padding-bottom:48px;border-bottom:1px solid var(--line)}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:18px;color:var(--paper)}
+.footer-brand svg{width:30px;height:30px}
+.footer-brand .text{font-family:'Inter';font-weight:700;font-size:17px;letter-spacing:-.02em}
 .footer-brand .e{color:var(--purple)}
-.footer-brand .text small{display:block;font-size:10px;letter-spacing:.22em;font-weight:400;color:var(--muted);margin-top:2px;text-transform:uppercase}
-footer p.tag{font-size:13.5px;color:var(--muted);max-width:340px;line-height:1.6}
+footer p.tag{font-size:14px;color:var(--muted);max-width:340px;line-height:1.55}
 
-.footer-col h5{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted-2);font-weight:500;margin-bottom:18px}
-.footer-col a{display:block;font-size:14px;color:var(--paper);margin-bottom:10px;transition:color .25s, transform .35s var(--easing-out);position:relative;padding-left:0}
-.footer-col a:hover{color:var(--purple-light);padding-left:6px}
+.footer-col h5{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:18px}
+.footer-col a{display:block;font-size:14.5px;color:var(--paper);margin-bottom:10px;font-weight:500;transition:color .25s,transform .35s var(--easing-out)}
+.footer-col a:hover{color:var(--purple-light);transform:translateX(4px)}
 
 .footer-bot{
   display:flex;justify-content:space-between;align-items:center;
-  margin-top:28px;flex-wrap:wrap;gap:14px;
-  font-size:11.5px;color:var(--muted-2);letter-spacing:.04em;
+  margin-top:32px;flex-wrap:wrap;gap:14px;
+  font-size:12px;color:var(--muted);font-weight:500;
 }
-
-.watermark{
-  font-family:'Fraunces',serif;font-weight:300;
-  font-size:clamp(70px,17vw,240px);
-  letter-spacing:-.05em;line-height:.85;
-  text-align:center;margin:60px 0 30px;
-  color:transparent;
-  -webkit-text-stroke:1px var(--line-2);
-  user-select:none;pointer-events:none;
-}
-.watermark .e{color:var(--purple);-webkit-text-stroke:0;font-style:italic;font-weight:400}
 
 @media (max-width:880px){
-  footer{padding:50px 24px 28px}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:30px;padding-bottom:32px}
+  footer{padding:50px 22px 28px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px;padding-bottom:32px}
   .footer-bot{flex-direction:column;align-items:flex-start;gap:8px}
-  .watermark{margin:40px 0 20px}
 }
+
+[data-archvis]{display:block;width:100%;height:100%}
 </style>
 </head>
 <body>
-
-<div class="grain"></div>
-<div class="vignette"></div>
 
 <!-- =============== NAV =============== -->
 <header class="nav" id="nav">
@@ -787,42 +562,35 @@ footer p.tag{font-size:13.5px;color:var(--muted);max-width:340px;line-height:1.6
     <a href="#top" class="brand">
       <svg class="brand-mark" viewBox="0 0 100 100">
         <polygon points="50,10 80,28 50,46 20,28" fill="#8169B5"/>
-        <polygon points="20,28 50,46 50,80 20,62" fill="#F2F1ED"/>
+        <polygon points="20,28 50,46 50,80 20,62" fill="#F2EFE8"/>
         <polygon points="80,28 50,46 50,80 80,62" fill="#5D4A8A"/>
       </svg>
-      <div>
-        <div class="brand-name"><span class="e">Edil</span>Marotta</div>
-        <div class="brand-tag">Impresa Edile</div>
-      </div>
+      <div class="brand-text"><span class="e">Edil</span>Marotta</div>
     </a>
     <nav class="nav-links">
-      <a href="#servizi">Servizi</a>
+      <a href="#cosa-facciamo">Cosa facciamo</a>
       <a href="#progetti">Progetti</a>
       <a href="#azienda">Azienda</a>
       <a href="#metodo">Metodo</a>
       <a href="#contatti">Contatti</a>
     </nav>
     <div style="display:flex;gap:12px;align-items:center;justify-self:end">
-      <div class="nav-status"><span class="dot"></span>Disponibili oggi</div>
       <a href="#contatti" class="nav-cta">Sopralluogo</a>
-      <button class="nav-burger" id="burger" aria-label="Menu">
-        <span></span><span></span>
-      </button>
+      <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span></button>
     </div>
   </div>
 </header>
 
-<!-- Mobile drawer -->
 <div class="drawer-bg" id="drawerBg"></div>
 <aside class="drawer" id="drawer">
-  <a href="#servizi"><span>Servizi</span><span>01</span></a>
-  <a href="#progetti"><span>Progetti</span><span>02</span></a>
-  <a href="#azienda"><span>Azienda</span><span>03</span></a>
-  <a href="#metodo"><span>Metodo</span><span>04</span></a>
-  <a href="#contatti"><span>Contatti</span><span>05</span></a>
+  <a href="#cosa-facciamo" class="dlnk"><span>Cosa facciamo</span><small>01</small></a>
+  <a href="#progetti" class="dlnk"><span>Progetti</span><small>02</small></a>
+  <a href="#azienda" class="dlnk"><span>Azienda</span><small>03</small></a>
+  <a href="#metodo" class="dlnk"><span>Metodo</span><small>04</small></a>
+  <a href="#contatti" class="dlnk"><span>Contatti</span><small>05</small></a>
   <div class="drawer-foot">
-    <p style="margin-bottom:14px">Disponibili Lun–Ven · 9–18</p>
-    <a href="tel:+390800000000">+39 080 000 0000</a><br>
+    <div class="lbl">Contatti diretti</div>
+    <a href="tel:+390800000000">+39 080 000 0000</a>
     <a href="mailto:info@edilmarotta.it">info@edilmarotta.it</a>
   </div>
 </aside>
@@ -830,26 +598,19 @@ footer p.tag{font-size:13.5px;color:var(--muted);max-width:340px;line-height:1.6
 <!-- =============== HERO =============== -->
 <section class="hero" id="top">
   <div class="hero-inner">
-    <div class="hero-meta">
-      <div class="left">
-        <span class="live"><span class="ld"></span>N° 001 — Vetrina</span>
-        <span><strong>Dal 1998</strong> · 25+ anni di cantieri</span>
-        <span><strong>Sede</strong> · Italia</span>
-      </div>
-      <div class="right">Documento aggiornato 2026</div>
-    </div>
+    <div class="hero-eyebrow">Impresa edile · Italia · Dal 1998</div>
 
     <h1 class="hero-title" id="heroTitle">
       <span class="word"><span>Costruiamo</span></span>
       <span class="word"><span>edifici</span></span>
-      <span class="word"><span><em>che&nbsp;durano</em></span></span><br>
-      <span class="word"><span>e&nbsp;cantieri</span></span>
+      <span class="word"><span><em>che&nbsp;durano.</em></span></span><br>
+      <span class="word"><span>Cantieri</span></span>
       <span class="word"><span>di&nbsp;cui</span></span>
-      <span class="word"><span><em>fidarsi.</em></span></span>
+      <span class="word"><span>fidarsi.</span></span>
     </h1>
 
     <div class="hero-bottom" id="heroBottom">
-      <p class="hero-lead">EdilMarotta è un'impresa edile italiana specializzata in costruzioni residenziali, ristrutturazioni di pregio e opere strutturali. Lavoriamo con un metodo trasparente, materiali certificati e tempi rispettati.</p>
+      <p class="hero-lead">Progettiamo e realizziamo costruzioni residenziali, ristrutturazioni di pregio e opere strutturali in tutta Italia. Metodo trasparente, materiali certificati, tempi rispettati.</p>
       <div class="hero-actions">
         <a href="#progetti" class="btn btn-ghost">
           <span>Vedi i progetti</span>
@@ -862,262 +623,215 @@ footer p.tag{font-size:13.5px;color:var(--muted);max-width:340px;line-height:1.6
       </div>
     </div>
   </div>
-
-  <div class="hero-scroll" id="heroScroll">
-    <span>Scroll</span>
-    <div class="ln"></div>
-  </div>
 </section>
 
-<!-- =============== LOGO STAGE =============== -->
-<section class="logo-section">
-  <div class="logo-stage">
-    <div class="meta">Pantone 2086 C<strong>Identità visiva</strong></div>
-    <div class="logo-mark-wrap" id="logoWrap">
-      <svg class="logo-mark" id="logoMark" viewBox="0 0 200 220">
-        <polygon points="100,10 170,46 100,82 30,46" fill="#8169B5"/>
-        <polygon points="170,46 170,180 100,216 100,82" fill="#0A0A0E"/>
-        <polygon points="155,75 155,165 140,172 140,90" fill="#F2F1ED"/>
-        <polygon points="30,90 100,126 100,142 30,106" fill="#8169B5"/>
-        <polygon points="30,130 100,166 100,182 30,146" fill="#8169B5"/>
-        <polygon points="30,46 100,82 100,216 30,180" fill="#5D4A8A" opacity=".25"/>
-      </svg>
-    </div>
-    <div class="meta right">Costituita 1998<strong>Iscrizione CCIAA</strong></div>
-  </div>
-</section>
-
-<!-- =============== NUMBERS =============== -->
-<section class="numbers">
-  <div class="numbers-grid" id="numbersGrid">
-    <div class="num-cell">
+<!-- =============== STATS =============== -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat">
       <div class="num"><span class="counter" data-target="27">0</span></div>
-      <div class="label">Anni di attività</div>
-      <div class="desc">Continuità imprenditoriale dal 1998 a oggi.</div>
+      <div class="label">Anni di attività dal 1998</div>
     </div>
-    <div class="num-cell">
+    <div class="stat">
       <div class="num"><span class="counter" data-target="320">0</span><span class="suffix">+</span></div>
-      <div class="label">Cantieri completati</div>
-      <div class="desc">Tra residenziale, commerciale e restauro.</div>
+      <div class="label">Cantieri completati in tutta Italia</div>
     </div>
-    <div class="num-cell">
+    <div class="stat">
       <div class="num"><span class="counter" data-target="45">0</span></div>
-      <div class="label">Professionisti</div>
-      <div class="desc">Maestranze interne, fornitori certificati.</div>
+      <div class="label">Professionisti nel team interno</div>
     </div>
-    <div class="num-cell">
+    <div class="stat">
       <div class="num"><span class="counter" data-target="10">0</span><span class="suffix">y</span></div>
-      <div class="label">Garanzia</div>
-      <div class="desc">Decennale postuma su tutte le opere.</div>
+      <div class="label">Garanzia decennale postuma</div>
     </div>
   </div>
 </section>
 
-<!-- =============== SERVICES =============== -->
-<section id="servizi">
-  <div class="container">
+<!-- =============== MOSAIC =============== -->
+<section class="mosaic-section" id="cosa-facciamo">
+  <div class="container" style="margin-bottom:60px">
     <div class="section-head reveal">
       <div>
-        <span class="section-label">Servizi</span>
-        <h2 class="section-title">Quello che facciamo, dall'<em>inizio</em> alla <em>consegna</em>.</h2>
+        <span class="kicker">Cosa facciamo</span>
+        <h2 class="h-big">Sei competenze, <em>un'unica regia.</em></h2>
       </div>
-      <p class="meta">Un team integrato che cura progettazione, cantiere, finiture e burocrazia. Un solo interlocutore, responsabilità chiare.</p>
-    </div>
-
-    <div class="services-list">
-      <a href="#contatti" class="service-item">
-        <div class="num">i.</div>
-        <h3>Costruzioni residenziali</h3>
-        <p>Ville, palazzine e case unifamiliari realizzate chiavi in mano con materiali certificati, classe energetica A o superiore.</p>
-        <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </a>
-      <a href="#contatti" class="service-item">
-        <div class="num">ii.</div>
-        <h3>Ristrutturazioni</h3>
-        <p>Riqualificazione integrale di immobili residenziali e commerciali, con coordinamento di architetti, impianti e finiture.</p>
-        <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </a>
-      <a href="#contatti" class="service-item">
-        <div class="num">iii.</div>
-        <h3>Opere strutturali</h3>
-        <p>Consolidamenti, sopraelevazioni, miglioramento sismico e calcoli strutturali firmati da ingegneri abilitati.</p>
-        <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </a>
-      <a href="#contatti" class="service-item">
-        <div class="num">iv.</div>
-        <h3>Restauro e recupero</h3>
-        <p>Interventi su edifici storici e di pregio, nel rispetto dei vincoli e delle tecniche tradizionali.</p>
-        <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </a>
-      <a href="#contatti" class="service-item">
-        <div class="num">v.</div>
-        <h3>Efficientamento energetico</h3>
-        <p>Cappotti termici, fotovoltaico, pompe di calore. Gestione completa di pratiche e bonus statali.</p>
-        <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </a>
-      <a href="#contatti" class="service-item">
-        <div class="num">vi.</div>
-        <h3>Pratiche edilizie</h3>
-        <p>SCIA, permessi a costruire, agibilità, accatastamenti. Ci occupiamo della burocrazia per tuo conto.</p>
-        <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </a>
+      <p class="meta">Dall'idea iniziale alla consegna delle chiavi. Un team integrato che cura progettazione, cantiere, finiture e burocrazia.</p>
     </div>
   </div>
-</section>
 
-<!-- =============== ABOUT =============== -->
-<section class="about" id="azienda">
-  <div class="container">
-    <div class="section-head reveal" style="margin-bottom:60px">
+  <div class="mosaic">
+    <a href="#contatti" class="tile t-purple">
+      <div class="tile-num">01</div>
       <div>
-        <span class="section-label">Azienda</span>
-        <h2 class="section-title">Un'impresa familiare con <em>metodi industriali</em>.</h2>
+        <h3>Costruzioni residenziali</h3>
+        <p>Ville, palazzine e case unifamiliari realizzate chiavi in mano. Materiali certificati, classe energetica A o superiore.</p>
       </div>
-    </div>
+      <div class="tile-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+    </a>
 
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p class="lead-p">EdilMarotta nasce nel 1998 dall'iniziativa di una famiglia di costruttori. In oltre venticinque anni abbiamo consegnato più di trecento cantieri tra abitazioni private, immobili commerciali e restauri di edifici storici.</p>
-        <p>Lavoriamo con un metodo lineare: <strong>preventivo dettagliato</strong>, cronoprogramma firmato, fotoreport settimanale, collaudo finale. Niente sorprese, niente costi aggiuntivi non concordati.</p>
-        <p>Crediamo che la qualità di un cantiere si veda dieci anni dopo la consegna. Per questo offriamo garanzia decennale postuma su tutte le opere e un anno di assistenza inclusa.</p>
+    <a href="#contatti" class="tile t-paper">
+      <div class="tile-num">02</div>
+      <div>
+        <h3>Ristrutturazioni</h3>
+        <p>Riqualificazione integrale di immobili residenziali e commerciali. Coordinamento di architetti, impianti e finiture.</p>
       </div>
+      <div class="tile-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+    </a>
 
-      <aside class="about-side reveal">
-        <h4>Cosa puoi aspettarti</h4>
-        <div class="value-row">
-          <div class="idx">i.</div>
-          <div>
-            <h5>Trasparenza contrattuale</h5>
-            <p>Preventivi analitici, voci dettagliate, nessun extra non firmato.</p>
-          </div>
-        </div>
-        <div class="value-row">
-          <div class="idx">ii.</div>
-          <div>
-            <h5>Direzione lavori dedicata</h5>
-            <p>Un referente unico per tutto il cantiere, sempre raggiungibile.</p>
-          </div>
-        </div>
-        <div class="value-row">
-          <div class="idx">iii.</div>
-          <div>
-            <h5>Tempistiche rispettate</h5>
-            <p>Cronoprogramma vincolante, penali in caso di ritardo non giustificato.</p>
-          </div>
-        </div>
-        <div class="value-row">
-          <div class="idx">iv.</div>
-          <div>
-            <h5>Garanzia decennale</h5>
-            <p>Polizza assicurativa postuma e assistenza post-consegna.</p>
-          </div>
-        </div>
-      </aside>
-    </div>
+    <a href="#contatti" class="tile t-darkcard">
+      <div class="tile-num">03</div>
+      <div>
+        <h3>Opere strutturali</h3>
+        <p>Consolidamenti, sopraelevazioni, miglioramento sismico.</p>
+      </div>
+      <div class="tile-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+    </a>
+
+    <a href="#contatti" class="tile t-soft">
+      <div class="tile-num">04</div>
+      <div>
+        <h3>Restauro e recupero</h3>
+        <p>Interventi su edifici storici e di pregio.</p>
+      </div>
+      <div class="tile-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+    </a>
+
+    <a href="#contatti" class="tile t-purpledark">
+      <div class="tile-num">05</div>
+      <div>
+        <h3>Efficientamento energetico</h3>
+        <p>Cappotti, fotovoltaico, pompe di calore, bonus.</p>
+      </div>
+      <div class="tile-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+    </a>
+
+    <a href="#contatti" class="tile t-darkcard">
+      <div class="tile-num">06</div>
+      <div>
+        <h3>Pratiche edilizie</h3>
+        <p>SCIA, permessi a costruire, agibilità, accatastamenti.</p>
+      </div>
+      <div class="tile-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+    </a>
   </div>
 </section>
 
 <!-- =============== PROJECTS =============== -->
 <section class="projects" id="progetti">
-  <div class="container">
+  <div class="container" style="margin-bottom:60px">
     <div class="section-head reveal">
       <div>
-        <span class="section-label">Progetti selezionati</span>
-        <h2 class="section-title">Una parte del nostro <em>lavoro</em>.</h2>
+        <span class="kicker">Progetti</span>
+        <h2 class="h-big">Una parte del nostro <em>lavoro.</em></h2>
       </div>
       <p class="meta">Una selezione recente. Per il portfolio completo è disponibile una documentazione tecnica su richiesta.</p>
     </div>
-
-    <div class="project-list">
-      <a href="#" class="project-row" data-img="linear-gradient(135deg,#8169B5,#3a2e58)" data-label="Villa Aurora · 2024">
-        <div class="num">/ 001</div>
-        <div class="title">Villa Aurora — residenza privata</div>
-        <div class="type">Nuova costruzione · 480 m²</div>
-        <div class="place">Provincia di Salerno · 2024</div>
-        <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-        <div class="project-mobile-img" style="background:linear-gradient(135deg,#8169B5,#3a2e58)">
-          <div class="lbl">
-            <span>Villa Aurora · 2024</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="project-row" data-img="linear-gradient(135deg,#5D4A8A,#0B0B0F)" data-label="Loft Centro Storico · 2024">
-        <div class="num">/ 002</div>
-        <div class="title">Loft Centro Storico</div>
-        <div class="type">Ristrutturazione integrale · 220 m²</div>
-        <div class="place">Napoli · 2024</div>
-        <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-        <div class="project-mobile-img" style="background:linear-gradient(135deg,#5D4A8A,#0B0B0F)">
-          <div class="lbl">
-            <span>Loft Centro Storico · 2024</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="project-row" data-img="linear-gradient(135deg,#B8A4D4,#5D4A8A)" data-label="Le Terrazze · 2023">
-        <div class="num">/ 003</div>
-        <div class="title">Le Terrazze — complesso residenziale</div>
-        <div class="type">Nuova costruzione · 12 unità</div>
-        <div class="place">Costiera · 2023</div>
-        <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-        <div class="project-mobile-img" style="background:linear-gradient(135deg,#B8A4D4,#5D4A8A)">
-          <div class="lbl">
-            <span>Le Terrazze · 2023</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="project-row" data-img="linear-gradient(135deg,#26262E,#8169B5)" data-label="Studio Vento · 2023">
-        <div class="num">/ 004</div>
-        <div class="title">Studio Vento — sede direzionale</div>
-        <div class="type">Ristrutturazione commerciale · 850 m²</div>
-        <div class="place">2023</div>
-        <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-        <div class="project-mobile-img" style="background:linear-gradient(135deg,#26262E,#8169B5)">
-          <div class="lbl">
-            <span>Studio Vento · 2023</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="project-row" data-img="linear-gradient(135deg,#7359A0,#1A1A22)" data-label="Casale di campagna · 2022">
-        <div class="num">/ 005</div>
-        <div class="title">Casale di campagna</div>
-        <div class="type">Restauro conservativo · 320 m²</div>
-        <div class="place">Cilento · 2022</div>
-        <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-        <div class="project-mobile-img" style="background:linear-gradient(135deg,#7359A0,#1A1A22)">
-          <div class="lbl">
-            <span>Casale di campagna · 2022</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-          </div>
-        </div>
-      </a>
-
-      <a href="#" class="project-row" data-img="linear-gradient(135deg,#8169B5,#B8A4D4)" data-label="Attico panoramico · 2022">
-        <div class="num">/ 006</div>
-        <div class="title">Attico panoramico</div>
-        <div class="type">Ristrutturazione di pregio · 280 m²</div>
-        <div class="place">2022</div>
-        <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-        <div class="project-mobile-img" style="background:linear-gradient(135deg,#8169B5,#B8A4D4)">
-          <div class="lbl">
-            <span>Attico panoramico · 2022</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-          </div>
-        </div>
-      </a>
-    </div>
   </div>
 
-  <div class="project-preview" id="projectPreview">
-    <div class="ph" id="projectPreviewImg"></div>
-    <div class="lbl" id="projectPreviewLbl"></div>
+  <div class="projects-grid">
+    <a href="#" class="project-card">
+      <div class="visual" data-archvis="villa"></div>
+      <div class="info">
+        <div class="info-top"><span>001</span><span>2024</span></div>
+        <h3>Villa Aurora</h3>
+        <p class="meta">Nuova costruzione · 480 m² · Provincia di Salerno</p>
+        <div class="arrow"><span>Scopri</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+      </div>
+    </a>
+
+    <a href="#" class="project-card">
+      <div class="visual" data-archvis="loft"></div>
+      <div class="info">
+        <div class="info-top"><span>002</span><span>2024</span></div>
+        <h3>Loft Centro Storico</h3>
+        <p class="meta">Ristrutturazione integrale · 220 m² · Napoli</p>
+        <div class="arrow"><span>Scopri</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+      </div>
+    </a>
+
+    <a href="#" class="project-card">
+      <div class="visual" data-archvis="terrazze"></div>
+      <div class="info">
+        <div class="info-top"><span>003</span><span>2023</span></div>
+        <h3>Le Terrazze</h3>
+        <p class="meta">Complesso residenziale · 12 unità · Costiera</p>
+        <div class="arrow"><span>Scopri</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+      </div>
+    </a>
+
+    <a href="#" class="project-card">
+      <div class="visual" data-archvis="vento"></div>
+      <div class="info">
+        <div class="info-top"><span>004</span><span>2023</span></div>
+        <h3>Studio Vento</h3>
+        <p class="meta">Sede direzionale · 850 m² · Ristrutturazione</p>
+        <div class="arrow"><span>Scopri</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+      </div>
+    </a>
+
+    <a href="#" class="project-card">
+      <div class="visual" data-archvis="casale"></div>
+      <div class="info">
+        <div class="info-top"><span>005</span><span>2022</span></div>
+        <h3>Casale di campagna</h3>
+        <p class="meta">Restauro conservativo · 320 m² · Cilento</p>
+        <div class="arrow"><span>Scopri</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+      </div>
+    </a>
+
+    <a href="#" class="project-card">
+      <div class="visual" data-archvis="attico"></div>
+      <div class="info">
+        <div class="info-top"><span>006</span><span>2022</span></div>
+        <h3>Attico panoramico</h3>
+        <p class="meta">Ristrutturazione di pregio · 280 m²</p>
+        <div class="arrow"><span>Scopri</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- =============== ABOUT =============== -->
+<section class="about" id="azienda">
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <span class="kicker">Azienda</span>
+      <p class="lead-p">Un'impresa familiare con <em>metodi industriali.</em> Dal 1998 costruiamo come se ci dovessimo abitare noi.</p>
+      <p>EdilMarotta nasce nel 1998 dall'iniziativa di una famiglia di costruttori. In oltre venticinque anni abbiamo consegnato più di trecento cantieri tra abitazioni private, immobili commerciali e restauri di edifici storici.</p>
+      <p>Lavoriamo con un metodo lineare: <strong>preventivo dettagliato</strong>, cronoprogramma firmato, fotoreport settimanale, collaudo finale. Niente sorprese, niente costi aggiuntivi non concordati.</p>
+    </div>
+
+    <aside class="about-side reveal">
+      <h4>Cosa puoi aspettarti</h4>
+      <div class="value-row">
+        <div class="idx">01</div>
+        <div>
+          <h5>Trasparenza contrattuale</h5>
+          <p>Preventivi analitici, voci dettagliate, nessun extra non firmato.</p>
+        </div>
+      </div>
+      <div class="value-row">
+        <div class="idx">02</div>
+        <div>
+          <h5>Direzione lavori dedicata</h5>
+          <p>Un referente unico per tutto il cantiere, sempre raggiungibile.</p>
+        </div>
+      </div>
+      <div class="value-row">
+        <div class="idx">03</div>
+        <div>
+          <h5>Tempistiche rispettate</h5>
+          <p>Cronoprogramma vincolante, penali per ritardi non giustificati.</p>
+        </div>
+      </div>
+      <div class="value-row">
+        <div class="idx">04</div>
+        <div>
+          <h5>Garanzia decennale</h5>
+          <p>Polizza assicurativa postuma e assistenza post-consegna.</p>
+        </div>
+      </div>
+    </aside>
   </div>
 </section>
 
@@ -1126,32 +840,32 @@ footer p.tag{font-size:13.5px;color:var(--muted);max-width:340px;line-height:1.6
   <div class="container">
     <div class="section-head reveal">
       <div>
-        <span class="section-label">Metodo</span>
-        <h2 class="section-title">Quattro fasi, <em>responsabilità chiare</em>.</h2>
+        <span class="kicker">Metodo</span>
+        <h2 class="h-big">Quattro fasi, <em>responsabilità chiare.</em></h2>
       </div>
       <p class="meta">Un processo collaudato in oltre trecento cantieri. Stesse regole per tutti, dimensione del cantiere a parte.</p>
     </div>
 
     <div class="process-grid reveal" id="processGrid">
       <div class="process-cell">
-        <div class="step-num">i. Ascolto</div>
+        <div class="step-num">01 — Ascolto</div>
         <h3>Sopralluogo gratuito</h3>
-        <p>Visita tecnica in loco, raccolta delle esigenze, definizione del budget di massima e degli obiettivi del cliente.</p>
+        <p>Visita tecnica in loco, raccolta delle esigenze, definizione del budget e degli obiettivi.</p>
       </div>
       <div class="process-cell">
-        <div class="step-num">ii. Progetto</div>
+        <div class="step-num">02 — Progetto</div>
         <h3>Computo e cronoprogramma</h3>
-        <p>Preventivo analitico per voce, render quando richiesti, cronoprogramma firmato vincolante per entrambe le parti.</p>
+        <p>Preventivo analitico per voce, render quando richiesti, cronoprogramma firmato vincolante.</p>
       </div>
       <div class="process-cell">
-        <div class="step-num">iii. Cantiere</div>
-        <h3>Esecuzione e direzione lavori</h3>
-        <p>Direzione dedicata, fotoreport settimanale, accesso continuo del cliente. Maestranze interne e fornitori certificati.</p>
+        <div class="step-num">03 — Cantiere</div>
+        <h3>Esecuzione</h3>
+        <p>Direzione dedicata, fotoreport settimanale, accesso continuo del cliente al cantiere.</p>
       </div>
       <div class="process-cell">
-        <div class="step-num">iv. Consegna</div>
+        <div class="step-num">04 — Consegna</div>
         <h3>Collaudo e garanzia</h3>
-        <p>Collaudo congiunto, documentazione tecnica completa, polizza decennale postuma, anno di assistenza incluso.</p>
+        <p>Documentazione tecnica completa, polizza decennale postuma, anno di assistenza incluso.</p>
       </div>
     </div>
   </div>
@@ -1160,9 +874,8 @@ footer p.tag{font-size:13.5px;color:var(--muted);max-width:340px;line-height:1.6
 <!-- =============== TESTIMONIAL =============== -->
 <section class="testimonial">
   <div class="container reveal">
-    <span class="section-label">Cosa dicono i clienti</span>
-    <div class="rating"></div>
-    <blockquote>Hanno trasformato la nostra villa in <em>un luogo che ogni mattina ci stupisce</em>. Trasparenza, ascolto e una qualità di esecuzione che non ho trovato altrove in vent'anni.</blockquote>
+    <span class="kicker" style="justify-content:center">Cosa dicono i clienti</span>
+    <blockquote>Hanno trasformato la nostra villa in <em>un luogo che ogni mattina ci stupisce.</em> Trasparenza, ascolto e una qualità di esecuzione che non avevo trovato altrove in vent'anni.</blockquote>
     <div class="author">
       <div class="author-photo">FC</div>
       <div class="author-info">
@@ -1173,11 +886,32 @@ footer p.tag{font-size:13.5px;color:var(--muted);max-width:340px;line-height:1.6
   </div>
 </section>
 
+<!-- =============== CTA BIG =============== -->
+<section class="cta-big">
+  <div class="container">
+    <div class="card reveal">
+      <div>
+        <h2>Pronti a iniziare<br>il tuo <em>progetto?</em></h2>
+        <p>Sopralluogo gratuito, preventivo dettagliato, risposta entro 24 ore lavorative.</p>
+      </div>
+      <div class="actions">
+        <a href="#contatti" class="btn btn-primary">
+          <span>Richiedi un sopralluogo</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:+390800000000" class="btn btn-ghost">
+          <span>+39 080 000 0000</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- =============== CONTACT =============== -->
 <section class="contact" id="contatti">
   <div class="container">
-    <span class="section-label">Contatti</span>
-    <h2>Hai un progetto<br>in mente? <em>Parliamone.</em></h2>
+    <span class="kicker">Contatti</span>
+    <h2 class="h-big">Hai un progetto<br>in mente? <em>Parliamone.</em></h2>
 
     <div class="contact-grid">
       <div class="reveal">
@@ -1191,11 +925,11 @@ footer p.tag{font-size:13.5px;color:var(--muted);max-width:340px;line-height:1.6
         </div>
         <div class="contact-info-row">
           <span class="label">Sede legale</span>
-          <span class="val">Via dell'Edilizia 12<br>00000 — Italia</span>
+          <span class="val">Via dell'Edilizia 12 — Italia</span>
         </div>
         <div class="contact-info-row">
           <span class="label">Orari ufficio</span>
-          <span class="val">Lunedì – Venerdì<br>9.00 – 13.00 · 14.30 – 18.00</span>
+          <span class="val">Lun–Ven · 9.00–18.00</span>
         </div>
         <div class="contact-info-row">
           <span class="label">Tempo di risposta</span>
@@ -1205,23 +939,11 @@ footer p.tag{font-size:13.5px;color:var(--muted);max-width:340px;line-height:1.6
 
       <form class="contact-form reveal" onsubmit="return submitForm(event)">
         <div class="contact-grid-fields">
-          <div class="row">
-            <label>Nome</label>
-            <input type="text" required placeholder="Mario">
-          </div>
-          <div class="row">
-            <label>Cognome</label>
-            <input type="text" required placeholder="Rossi">
-          </div>
+          <div class="row"><label>Nome</label><input type="text" required placeholder="Mario"></div>
+          <div class="row"><label>Cognome</label><input type="text" required placeholder="Rossi"></div>
         </div>
-        <div class="row">
-          <label>Email</label>
-          <input type="email" required placeholder="mario@email.it">
-        </div>
-        <div class="row">
-          <label>Telefono</label>
-          <input type="tel" placeholder="+39 ...">
-        </div>
+        <div class="row"><label>Email</label><input type="email" required placeholder="mario@email.it"></div>
+        <div class="row"><label>Telefono</label><input type="tel" placeholder="+39 ..."></div>
         <div class="row">
           <label>Tipo di intervento</label>
           <select>
@@ -1233,10 +955,7 @@ footer p.tag{font-size:13.5px;color:var(--muted);max-width:340px;line-height:1.6
             <option>Altro</option>
           </select>
         </div>
-        <div class="row">
-          <label>Descrizione del progetto</label>
-          <textarea required placeholder="Una breve descrizione di ciò che hai in mente, area indicativa, eventuali tempi…"></textarea>
-        </div>
+        <div class="row"><label>Descrizione del progetto</label><textarea required placeholder="Una breve descrizione di ciò che hai in mente, area indicativa, eventuali tempi…"></textarea></div>
         <button type="submit" class="btn btn-primary submit">
           <span id="submitText">Invia richiesta</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -1254,24 +973,21 @@ footer p.tag{font-size:13.5px;color:var(--muted);max-width:340px;line-height:1.6
         <div class="footer-brand">
           <svg viewBox="0 0 100 100">
             <polygon points="50,10 80,28 50,46 20,28" fill="#8169B5"/>
-            <polygon points="20,28 50,46 50,80 20,62" fill="#F2F1ED"/>
+            <polygon points="20,28 50,46 50,80 20,62" fill="#F2EFE8"/>
             <polygon points="80,28 50,46 50,80 80,62" fill="#5D4A8A"/>
           </svg>
-          <div class="text">
-            <span class="e">Edil</span>Marotta
-            <small>Impresa Edile</small>
-          </div>
+          <div class="text"><span class="e">Edil</span>Marotta</div>
         </div>
         <p class="tag">Impresa edile italiana dal 1998. Costruzioni, ristrutturazioni e opere strutturali. Cantieri trasparenti, garanzia decennale.</p>
       </div>
 
       <div class="footer-col">
-        <h5>Servizi</h5>
-        <a href="#servizi">Costruzioni</a>
-        <a href="#servizi">Ristrutturazioni</a>
-        <a href="#servizi">Opere strutturali</a>
-        <a href="#servizi">Restauro</a>
-        <a href="#servizi">Efficientamento</a>
+        <h5>Cosa facciamo</h5>
+        <a href="#cosa-facciamo">Costruzioni</a>
+        <a href="#cosa-facciamo">Ristrutturazioni</a>
+        <a href="#cosa-facciamo">Opere strutturali</a>
+        <a href="#cosa-facciamo">Restauro</a>
+        <a href="#cosa-facciamo">Efficientamento</a>
       </div>
 
       <div class="footer-col">
@@ -1286,12 +1002,9 @@ footer p.tag{font-size:13.5px;color:var(--muted);max-width:340px;line-height:1.6
         <h5>Legale</h5>
         <a href="#">Privacy policy</a>
         <a href="#">Cookie policy</a>
-        <a href="#">Termini</a>
-        <a href="#">Whistleblowing</a>
+        <a href="#">Termini di servizio</a>
       </div>
     </div>
-
-    <div class="watermark"><span class="e">Edil</span>Marotta</div>
 
     <div class="footer-bot">
       <div>© 2026 EdilMarotta S.r.l. · P.IVA 00000000000 · CCIAA n° 000000</div>
@@ -1301,13 +1014,88 @@ footer p.tag{font-size:13.5px;color:var(--muted);max-width:340px;line-height:1.6
 </footer>
 
 <script>
-/* Nav scroll */
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 30);
-});
+function archvisSVG(kind){
+  const palettes = {
+    villa:    {bg:'#22182E', l1:'#8169B5', l2:'#5D4A8A', l3:'#3a2e58'},
+    loft:     {bg:'#0F0F14', l1:'#8169B5', l2:'#5D4A8A', l3:'#1A1A22'},
+    terrazze: {bg:'#1A1326', l1:'#B8A4D4', l2:'#8169B5', l3:'#5D4A8A'},
+    vento:    {bg:'#0A0A0E', l1:'#B8A4D4', l2:'#8169B5', l3:'#26212F'},
+    casale:   {bg:'#1B1525', l1:'#8169B5', l2:'#5D4A8A', l3:'#7359A0'},
+    attico:   {bg:'#211A2C', l1:'#B8A4D4', l2:'#8169B5', l3:'#5D4A8A'}
+  };
+  const p = palettes[kind] || palettes.villa;
+  const designs = {
+    villa: `
+      <rect width="400" height="300" fill="${p.bg}"/>
+      <rect x="60" y="110" width="160" height="150" fill="${p.l3}"/>
+      <rect x="220" y="70" width="120" height="190" fill="${p.l2}"/>
+      <rect x="80" y="130" width="22" height="44" fill="${p.l1}" opacity=".75"/>
+      <rect x="118" y="130" width="22" height="44" fill="${p.l1}" opacity=".75"/>
+      <rect x="156" y="130" width="22" height="44" fill="${p.l1}" opacity=".75"/>
+      <rect x="80" y="190" width="22" height="44" fill="${p.l1}" opacity=".75"/>
+      <rect x="118" y="190" width="22" height="44" fill="${p.l1}" opacity=".75"/>
+      <rect x="156" y="190" width="22" height="44" fill="${p.l1}" opacity=".75"/>
+      <rect x="240" y="90" width="80" height="3" fill="${p.l1}"/>
+      <rect x="240" y="130" width="80" height="3" fill="${p.l1}"/>
+      <rect x="240" y="170" width="80" height="3" fill="${p.l1}"/>
+      <rect x="240" y="210" width="80" height="3" fill="${p.l1}"/>
+    `,
+    loft: `
+      <rect width="400" height="300" fill="${p.bg}"/>
+      <rect x="40" y="50" width="320" height="200" fill="${p.l3}"/>
+      <line x1="40" y1="115" x2="360" y2="115" stroke="${p.l1}" stroke-width="1" opacity=".5"/>
+      <line x1="40" y1="180" x2="360" y2="180" stroke="${p.l1}" stroke-width="1" opacity=".5"/>
+      <line x1="120" y1="50" x2="120" y2="250" stroke="${p.l1}" stroke-width="1" opacity=".3"/>
+      <line x1="200" y1="50" x2="200" y2="250" stroke="${p.l1}" stroke-width="1" opacity=".3"/>
+      <line x1="280" y1="50" x2="280" y2="250" stroke="${p.l1}" stroke-width="1" opacity=".3"/>
+      <rect x="60" y="70" width="50" height="32" fill="${p.l2}"/>
+      <rect x="220" y="200" width="80" height="40" fill="${p.l2}" opacity=".7"/>
+    `,
+    terrazze: `
+      <rect width="400" height="300" fill="${p.bg}"/>
+      <polygon points="0,260 100,210 100,260" fill="${p.l3}"/>
+      <polygon points="100,210 200,160 200,260 100,260" fill="${p.l2}"/>
+      <polygon points="200,160 300,110 300,260 200,260" fill="${p.l3}"/>
+      <polygon points="300,110 400,60 400,260 300,260" fill="${p.l2}"/>
+      <circle cx="340" cy="60" r="22" fill="${p.l1}" opacity=".25"/>
+    `,
+    vento: `
+      <rect width="400" height="300" fill="${p.bg}"/>
+      <rect x="50" y="60" width="300" height="200" fill="${p.l3}"/>
+      <rect x="70" y="80" width="260" height="44" fill="${p.l2}" opacity=".7"/>
+      <rect x="70" y="140" width="120" height="100" fill="${p.l1}" opacity=".5"/>
+      <rect x="210" y="140" width="120" height="100" fill="${p.l2}" opacity=".5"/>
+      <line x1="50" y1="124" x2="350" y2="124" stroke="${p.l1}" stroke-width="1.5"/>
+      <line x1="200" y1="60" x2="200" y2="260" stroke="${p.l1}" stroke-width="1" opacity=".5"/>
+    `,
+    casale: `
+      <rect width="400" height="300" fill="${p.bg}"/>
+      <polygon points="100,260 100,150 200,80 300,150 300,260" fill="${p.l3}"/>
+      <polygon points="100,150 200,80 300,150" fill="${p.l2}"/>
+      <rect x="180" y="190" width="44" height="70" fill="${p.l1}" opacity=".5"/>
+      <rect x="125" y="170" width="24" height="24" fill="${p.l1}" opacity=".7"/>
+      <rect x="251" y="170" width="24" height="24" fill="${p.l1}" opacity=".7"/>
+      <circle cx="60" cy="60" r="16" fill="${p.l1}" opacity=".3"/>
+    `,
+    attico: `
+      <rect width="400" height="300" fill="${p.bg}"/>
+      <rect x="0" y="170" width="400" height="90" fill="${p.l3}"/>
+      <rect x="40" y="80" width="320" height="90" fill="${p.l2}" opacity=".7"/>
+      <line x1="0" y1="170" x2="400" y2="170" stroke="${p.l1}" stroke-width="1.5"/>
+      <rect x="80" y="105" width="32" height="58" fill="${p.l1}" opacity=".7"/>
+      <rect x="140" y="105" width="32" height="58" fill="${p.l1}" opacity=".7"/>
+      <rect x="200" y="105" width="32" height="58" fill="${p.l1}" opacity=".7"/>
+      <rect x="260" y="105" width="32" height="58" fill="${p.l1}" opacity=".7"/>
+      <circle cx="340" cy="55" r="20" fill="${p.l1}" opacity=".5"/>
+    `
+  };
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">${designs[kind]||designs.villa}</svg>`;
+}
+document.querySelectorAll('[data-archvis]').forEach(el => { el.innerHTML = archvisSVG(el.dataset.archvis); });
 
-/* Burger / drawer */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 30); });
+
 const burger = document.getElementById('burger');
 const drawer = document.getElementById('drawer');
 const drawerBg = document.getElementById('drawerBg');
@@ -1323,16 +1111,13 @@ drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   if(drawer.classList.contains('open')) toggleDrawer();
 }));
 
-/* Hero animation on load */
 window.addEventListener('load', () => {
   setTimeout(() => {
     document.getElementById('heroTitle').classList.add('in');
     document.getElementById('heroBottom').classList.add('in');
-    document.getElementById('heroScroll').classList.add('in');
   }, 100);
 });
 
-/* Reveal */
 const obs = new IntersectionObserver((entries) => {
   entries.forEach(en => {
     if(en.isIntersecting){
@@ -1341,9 +1126,8 @@ const obs = new IntersectionObserver((entries) => {
     }
   });
 }, {threshold:.15, rootMargin:'0px 0px -60px 0px'});
-document.querySelectorAll('.reveal, .num-cell, #numbersGrid, #processGrid').forEach(el => obs.observe(el));
+document.querySelectorAll('.reveal, #processGrid').forEach(el => obs.observe(el));
 
-/* Counters */
 const counters = document.querySelectorAll('.counter');
 const cObs = new IntersectionObserver((entries) => {
   entries.forEach(en => {
@@ -1366,52 +1150,8 @@ const cObs = new IntersectionObserver((entries) => {
 }, {threshold:.4});
 counters.forEach(c => cObs.observe(c));
 
-/* Logo 3D follow mouse */
-const logoMark = document.getElementById('logoMark');
-if(logoMark){
-  const stage = document.querySelector('.logo-section');
-  stage.addEventListener('mousemove', e => {
-    const r = stage.getBoundingClientRect();
-    const x = (e.clientX - r.left)/r.width - .5;
-    const y = (e.clientY - r.top)/r.height - .5;
-    logoMark.style.transform = `rotateX(${-y*15}deg) rotateY(${x*25}deg)`;
-  });
-  stage.addEventListener('mouseleave', () => {
-    logoMark.style.transform = 'rotateX(0) rotateY(0)';
-  });
-}
+document.querySelectorAll('.project-card,.tile').forEach(el => el.addEventListener('click', e => e.preventDefault()));
 
-/* Project preview floating (desktop) */
-const preview = document.getElementById('projectPreview');
-const previewImg = document.getElementById('projectPreviewImg');
-const previewLbl = document.getElementById('projectPreviewLbl');
-const projectRows = document.querySelectorAll('.project-row');
-
-projectRows.forEach(row => {
-  row.addEventListener('mouseenter', () => {
-    if(window.innerWidth < 880) return;
-    previewImg.style.background = row.dataset.img;
-    previewLbl.textContent = row.dataset.label;
-    preview.classList.add('show');
-  });
-  row.addEventListener('mouseleave', () => preview.classList.remove('show'));
-  row.addEventListener('click', e => e.preventDefault());
-});
-
-let pmx = 0, pmy = 0, prx = 0, pry = 0;
-window.addEventListener('mousemove', e => { pmx = e.clientX + 80; pmy = e.clientY; });
-function animatePreview(){
-  prx += (pmx - prx) * .15;
-  pry += (pmy - pry) * .15;
-  if(preview.classList.contains('show')){
-    preview.style.left = prx + 'px';
-    preview.style.top = pry + 'px';
-  }
-  requestAnimationFrame(animatePreview);
-}
-animatePreview();
-
-/* Form */
 function submitForm(e){
   e.preventDefault();
   const t = document.getElementById('submitText');
